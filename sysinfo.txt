@@ -1,0 +1,5 @@
+core id		: 0
+core id		: 1
+core id		: 2
+core id		: 3
+x86_64

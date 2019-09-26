@@ -1,0 +1,25 @@
+
+sum.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <sumstore>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 30          	sub    $0x30,%rsp
+   8:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+   c:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
+  10:	48 89 55 d8          	mov    %rdx,-0x28(%rbp)
+  14:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+  18:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+  1c:	48 89 d6             	mov    %rdx,%rsi
+  1f:	48 89 c7             	mov    %rax,%rdi
+  22:	e8 00 00 00 00       	callq  27 <sumstore+0x27>
+  27:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  2b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+  2f:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+  33:	48 89 10             	mov    %rdx,(%rax)
+  36:	90                   	nop
+  37:	c9                   	leaveq 
+  38:	c3                   	retq   
